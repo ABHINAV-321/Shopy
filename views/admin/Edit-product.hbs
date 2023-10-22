@@ -1,0 +1,45 @@
+
+<div class="container-fluid">
+<h2 class="pt-2">Product details</h2><br>
+<form action="/admin/edit-product?id={{_id}}" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label >Product</label>
+    <input type="text" class="form-control"  value="{{name}}"name="name">
+  </div>
+  <div class="form-group">
+    <label >Price</label>
+    <input type="text" name="price" class="form-control"  value="{{price}}">
+  </div>
+  <div class="form-group">
+    <label >Category</label>
+    <input type="text" name="category" class="form-control"  value="{{category}}">
+  </div>
+  <div class="form-group">
+    <label >Description</label>
+    <input type="text" name="des" class="form-control"  value="{{des}}">
+  </div>
+<div class="form-group">
+    <label >Discount</label>
+    <input type="text" name="discount" class="form-control"  value="{{discount}}">
+  </div>
+<div class="form-group">
+    <label >Delivery Charge</label>
+    <input type="text" name="dCharge" class="form-control"  value="{{dCharge}}">
+  </div>
+  <div class="form-group">
+    <label >Image<br><img src="/images/product-img/{{_id}}.jpg" height="100px" width="100px" id="imgView"></label>
+    <input type="file" class="form-control-file" id="img" name="img" onchange="viewImg(event) ">
+  </div>
+<!--<div class="form-group">
+    <label for="exampleFormControlFile1">Upload Image</label>
+    <input type="file" class="form-control-file" id="img" name="img">
+  </div>-->
+  
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+<script>
+  function viewImg(event){
+    document.getElementById('imgView').src=URL.createObjectURL(event.target.files[0])
+  }
+</script>
+</div>

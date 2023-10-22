@@ -1,0 +1,45 @@
+<section>
+  <div class="container-fluid mt-5">
+    <div class="row float-left">
+      <a href="/admin/add-product" class="m-2 mt-4 btn btn-success ml-auto">Add Product</a>
+      </div> 
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th scope="col">Discount</th>
+      <th scope="col">DCharge</th>
+      <th scope="col">Image</th>
+      <th scope="col">options</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each product}}
+    <tr>
+   
+      <td>{{name}}</td>
+      <td>{{price}}</td>
+      <td>{{category}}</td>
+      <td>{{des}}</td>
+      <td>{{discount}}%</td>
+      <td>₹ {{dCharge}}</td>
+      <td><img style="height:60px; width:60px;" src="/images/product-img/{{_id}}.jpg"></td>
+      <td><a href="/admin/delete-product?id={{_id}}" class="btn btn-danger mt-3">
+        <img src="https://img.icons8.com/?size=512&id=99961&format=png" width="15px"height="25px" onclick="return confirm('Are you sure want to delete product {{name}}')">
+      </a></td>
+      <td>
+      <a href="/admin/edit-product?id={{_id}}" class="btn btn-primary mt-3">
+        <img src="https://img.icons8.com/?size=512&id=Bt7wc08EJOiY&format=png" width="20px"height="25px" >
+      </a></td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+  </div>
+  </section>

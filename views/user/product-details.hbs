@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    
+    <div class="col col-11 col-xl-11">
+      <hr>
+<div class=" "style="width:5rem;  float:right;">
+  <img src="/images/product-img/{{product._id}}.jpg" class="card-img-top pb-3 img-responsive center-block " style="float:left;  display:block; width:3rem; display: block; margin-left: auto; margin-right: auto;"alt="">
+  </div>
+     <h4>{{product.name}}</h4>
+ 
+     <h6 class="text-muted">{{product.des}}</h6>
+   <!--<h6> ₹ {{product.price}}</h6>-->
+    <h6>{{orderDetails.Qty}}</h6>
+   
+    <hr>
+      <h3>Order is ready for shipping</h3>
+      <hr>
+      <h6>Shipping Address :</h6><span class="float-right">{{orderDetails.deliveryDetails.address}},<br>{{orderDetails.deliveryDetails.pincode}}</span><br><br>
+      <h6>phone number :      
+      <span class="text-dark  font-weight-normal">{{orderDetails.deliveryDetails.mobile}}</span></h6>
+      <hr>
+    </div>
+  </div>
+      <div class=" container-fluid col-md-5 col-xl-6 col-11 col-sm-10 m-3">
+<h6 class="ml-3 mt-4">Price details</h6>
+<div class="card  justify-content-center bg-light" style="height:auto; width:auto; align:center;">
+<div class="card-body">
+<p class="float-right">₹{{product.price}}</p>
+  <p >Price : </p>
+  <p class="float-right">free</p>
+  <p>delivery charge :</p>
+  <p class="float-right">GST not applicaple</p>
+  <p>GST :</p>
+  <p class="float-right">₹100</p>
+  <p>Discount:</p>
+  <hr>
+    <h5 class="float-right">₹ {{product.price}}</h5>
+    <h5 class="card-title">Total Price </h5>
+    
+
+
+
+    </div>
+ </div>
+ </div>
+</div>

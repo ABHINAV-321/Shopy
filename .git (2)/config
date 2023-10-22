@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/ABHINAV-321/shopping-cart
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "heroku"]
+	url = https://git.heroku.com/shopping-cart68.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+[remote "gitHubNew"]
+	url = https://github.com/ABHINAV-321/Shopy
+	fetch = +refs/heads/*:refs/remotes/gitHubNew/*

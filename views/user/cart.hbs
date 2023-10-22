@@ -1,0 +1,70 @@
+
+
+<section>
+  <div class="container-fluid">
+  <div class="row pt-3">
+    {{#if products}}
+{{#each products}}
+{{#each this.product}}
+    <div class=" container-fluid col-md-3 col-xl-2 col-11 col-sm-6 m-3">
+<div class="card  " style="height:auto; width:auto; align:center;">
+<div class="card-body">
+  <div style="width:7rem;  float:left;">
+  <img src="/images/product-img/{{_id}}.jpg" class="card-img-top pb-3 img-responsive center-block " style="float:left;  display:block; width:5rem; display: block; margin-left: auto; margin-right: auto;"alt="">
+  </div>
+  <h5 class="card-title">{{name}}</h5>
+    <h7 class="text-info ">₹ {{price}}</h7>
+    <p class="card-text">{{des}}</p>
+
+ {{/each}}
+ <div class="float-left">
+<button class="btn btn-danger" onclick="subCart('{{item}}')">-</button>  <span id="count-{{item}}">  {{Qty}}  </span>  <button class="btn btn-success" onclick="addCart('{{item}}',1)">+</button>
+</div>
+<div>
+   
+    <a href="/remove/?id={{item}}" class="btn btn-danger ml-4">   remove     </a>
+    <!--<a href="/order/" class="ml-3 btn btn-primary ml-1" >Buy this now</a><br>
+   -->
+    </div>
+  </div>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
+<footer class="footer">
+  <!-- <div class=" container-fluid col-md-3 col-xl-2 col-11 col-sm-6 m-3">
+<div class="card  " style="height:auto; width:auto; align:center;">
+<div class="card-body">-->
+    <h5 class="card-title float-left">Total Price ₹ <span id="total">{{totalPrice}}</span></h5>
+    
+    <a href="/order"  class="float-right card-text btn btn-success ">Order Now</a>
+</footer>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding:20px;
+  margin-top:20px;
+  color:#fffafa;
+  background-color:#35424a;
+  text-align: center;
+}
+</style>
+{{else}}
+<div>
+  <h2>Cart is empty</h2>
+  <br>
+</div>
+<br>
+<br>
+<div>
+
+<a href="/" class="btn btn-primary mt-5">Shop Now</a>
+</div>
+
+
+{{/if}}
+</section>

@@ -1,0 +1,26 @@
+<form action="/admin/login" method="post">
+  <div class="container-fluid mt-3">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="Email">
+    {{#if EmailErr}}
+    <p class="text-danger"> Incorect email please check it or signup</p>
+
+    {{else}}
+
+    <small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone else.</small>
+    {{/if}}
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Password">
+<i class="bi bi-eye-slash" id="togglePassword">click</i>
+    {{#if PasswordErr}}
+    <p class="text-danger"> Incorrect Password !!!<br> Please recheck your password</p>
+
+    {{/if}}
+  </div>
+
+  <button type="submit" class="mt-4  btn btn-primary">Submit</button>
+  </div>
+</form>
